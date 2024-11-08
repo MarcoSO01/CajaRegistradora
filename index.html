@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caja Registradora</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="productos">
+            <label for="selectProducto">PRODUCTOS</label>
+            <select id="selectProducto">
+                <option value="0" data-image="./images/dafiti.png">Selecciona un producto</option>
+                <option value="1" data-image="./images/poloHombre.png">Polo Hombre - $100.000</option>
+                <option value="2" data-image="./images/chaquetaHombre.png">Chaqueta Hombre - $150.000</option>
+                <option value="3" data-image="./images/pantalonHombre.png">Pantalón Hombre - $200.000</option>
+                <option value="4" data-image="./images/tenisHombre.png">Tennis Hombre - $250.000</option>
+                <option value="5" data-image="./images/relojesHombre.png">Relojes Hombre - $120.000</option>
+                <option value="6" data-image="./images/blusaMujer.png">Blusa Mujer - $100.000</option>
+                <option value="7" data-image="./images/chaquetaMujer.png">Chaqueta Mujer - $150.000</option>
+                <option value="8" data-image="./images/pantalonMujer.png">Pantalón Mujer - $200.000</option>
+                <option value="9" data-image="./images/tennisMujer.png">Tennis Mujer - $200.000</option>
+                <option value="10" data-image="./images/relojesMujer.png">Relojes Mujer - $200.000</option>
+            </select>
+
+            <div class="productoImagen">
+                <img src="./images/dafiti.png" alt="Imagen del Producto" id="imagenProducto">
+            </div>
+        </div>
+
+        <div class="carrito">
+            <h2>CARRITO</h2>
+            <label for="producto">Producto</label>
+            <input type="text" id="producto" readonly>
+            <label for="cantidad">Cantidad</label>
+            <input type="number" id="cantidad" min="1" value="1">
+            <button id="agregarBtn">Agregar</button>
+            
+            <div class="lista-productos">
+                <h3>Total Productos</h3>
+                <table id="listaProductos">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                            <th>Borrar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="total">
+                <h3>Total</h3>
+                <span id="total">$0</span>
+                <button id="borrarTodoBtn">Borrar Todo</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./javascript/main.js"></script>
+</body>
+</html>
